@@ -23,10 +23,10 @@ public class GunController : MonoBehaviour
         //Ta Daaa
         gunParent.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Shoot();
-        }
+        //if (Input.GetKeyDown(KeyCode.Mouse0))
+        //{
+        //    Shoot();
+        //}
     }
 
     float AngleBetweenTwoPoints(Vector2 a, Vector2 b)

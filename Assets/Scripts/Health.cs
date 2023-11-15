@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public float healthAmount;
-    public float maxHealth = 100;
+    public float maxHealth;
     public float minHealth = 0;
 
     private Coroutine healCoroutine;
@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        healthAmount = 40;
+        healthAmount = maxHealth;
     }
 
     private void Update()
@@ -39,7 +39,7 @@ public class Health : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            if (healthAmount <= 100)
+            if (healthAmount <= maxHealth)
             {
                 yield return new WaitForSeconds(0.5f);
                 healthAmount += hpPerSecond;
